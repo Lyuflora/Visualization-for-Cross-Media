@@ -233,5 +233,76 @@ ID叫做xx的應該是甚麽樣子..
 每个指定了 manifest 的页面在用户对其访问时都会被缓存。如果未指定 manifest 属性，则页面不会被缓存（除非在 manifest 文件中直接指定了该页面）。
 这方面还没有仔细了解过，等以后用到了再研究。
 
-### HTML a 标签的 target 属性
-规定在何处打开链接文档，一个简单的作用是：可以将文档重定向到一个单独的窗口。
+### HTML `<a>` 标签的 target 属性
+
+规定在何处打开链接文档
+
+#### 打开新窗口
+一个简单的作用是：可以将文档重定向到一个单独的窗口。
+
+
+	<html>
+	<body>
+
+	<h3>Table of Contents</h3>
+	<ul>
+ 	 <li><a href="/example/html/pref.html" 	target="view_window">Preface</a></li>
+ 	 <li><a href="/example/html/chap1.html" target="view_window">Chapter 1</a></li>
+ 	 <li><a href="/example/html/chap2.html" target="view_window">Chapter 2</a></li>
+ 	 <li><a href="/example/html/chap3.html" target="view_window">Chapter 3</a></li>
+	</ul>
+
+	</body>
+	</html>
+	// 例子来源于w3school,打开三个超链接，将在同一个新窗口中重新加载内容
+
+#### 在框架中打开窗口
+
+在一个 `<frameset>` 显示中将超链接内容定向到一个或者多个框架中。可以将这个内容列表放入一个带有两个框架的文档的其中一个框架中，并用这个相邻的框架来显示选定的文档：
+
+	<html>
+
+	<frameset cols="200,*">
+  		<frame src="/example/html/toc.html">
+  		<frame src="/example/html/pref.html" name="view_frame">
+	</frameset> 
+
+	</html>
+	// 例子来源于w3school
+
+### @keyframes
+
+### CSS justify-content
+
+在弹性盒对象的 <div> 元素中的各项周围留有空白：
+
+		div
+	{
+ 	   display: flex;
+	    justify-content: space-around;
+	}
+
+### not 选择器
+
+	<style>
+	p {
+	    color: #000000;
+	}
+	
+	:not(p) {
+	    color: #ff0000;
+	}
+	</style>
+	</head>
+	<body>
+
+	<h1>这是一个标题</h1>
+
+	<p>这是一个段落.</p>
+	<p>这是另一个段落.</p>
+
+	<div>这是div元素的一些文本。</div>
+
+
+
+	// 为每个并非<p>元素的元素设置背景颜色：两类元素获得不同效果
