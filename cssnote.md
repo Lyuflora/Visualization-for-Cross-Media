@@ -26,7 +26,7 @@
 	 - font-size
 	 
 ### 文本效果
-- text-shadow:3px 5px 5px rgba(0,255,0,0,5) 距離x方向延伸 距離y方向延伸 模糊範圍 顔色 可以多爾叠加組合
+- text-shadow:3px 5px 5px rgba(0,255,0,0.5) 距離x方向延伸 距離y方向延伸 模糊範圍 顔色 可以多爾叠加組合
 - outline-color:red 邊框顔色
 - outline-style:solid 邊框綫形 dotted dashed double groove(三維凹槽) ridge(三維凸槽) inset(凹邊) outset(凸邊)
 - outline-width:1 邊框粗細
@@ -180,5 +180,54 @@ ID叫做xx的應該是甚麽樣子..
 	<a href="https://verybusyrecently.club">
 	<a class = "red" href="https://verybusyrecently.club">
 
+#### before 选择器
+	p:before {}
+	// 在每个 <p> 元素的内容之前插入内容。
+
 ### Reference
 [https://study.163.com/course/courseMain.htm?courseId=190001](https://study.163.com/course/courseMain.htm?courseId=190001 "網易雲課堂_CSS_FatMouse")
+
+[https://www.w3school.com.cn/cssref/index.asp](https://www.w3school.com.cn/cssref/index.asp "CSS參考表")
+
+### 字體導入
+
+	@font-face {
+	    font-family: Supernett;
+	    src: url("../fonts/Supernett-cn Light.otf") format("otf");
+	    font-weight: 700;
+	    font-style: italic
+	}
+
+### 响应式布局
+根据设置自适应显示。媒体查询可用于检测很多事情，例如：
+
+ - viewport(视窗) 的宽度与高度
+ - 设备的宽度与高度
+ - 朝向 (智能手机横屏，竖屏)
+ - 分辨率
+
+必须在 <head> 中添加一个 <meta> 标签：
+
+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+
+代码原意翻译过来既是： 视窗的宽度等于设备宽度，原始比例始终为 1:1 。这样在改变 device-width 的时候任意变化修改都能自适应了。
+
+
+	@media (min-width: 768px){ //>=768的设备 }
+	// 注意顺序不同，可能有的会被覆盖而失效
+
+
+#### 多媒体查询语法
+多媒体查询由多种媒体组成，可以包含一个或多个表达式，表达式根据条件是否成立返回 true 或 false 。
+如果指定的多媒体类型匹配设备类型则查询结果返回 true，文档会在匹配的设备上显示指定样式效果。
+除非你使用了 not 或 only 操作符，否则所有的样式会适应在所有设备上显示效果。
+
+#### html manifest属性
+规定文档的缓存 manifest 的位置。Web 应用程序可以被缓存。
+如需启用应用程序缓存，文档的<html> 标签中包含 manifest 属性：
+
+	<!DOCTYPE HTML>
+	<html manifest="demo.appcache">
+	...
+	</html>
+每个指定了 manifest 的页面在用户对其访问时都会被缓存。如果未指定 manifest 属性，则页面不会被缓存（除非在 manifest 文件中直接指定了该页面）。
