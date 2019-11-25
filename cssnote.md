@@ -308,4 +308,81 @@ ID叫做xx的應該是甚麽樣子..
 	// 为每个并非<p>元素的元素设置背景颜色：两类元素获得不同效果
 
 
-### CSS displine选择器
+none	此元素不会被显示。<br>
+block	此元素将显示为块级元素，此元素前后会带有换行符。<br>
+inline	默认。此元素会被显示为内联元素，元素前后没有换行符。<br>
+inline-block	行内块元素。（CSS2.1 新增的值）<br>
+list-item	此元素会作为列表显示。<br>
+run-in	此元素会根据上下文作为块级元素或内联元素显示。<br>
+
+### CSS display选择器
+display 属性规定元素应该生成的框的类型
+
+### CSS transition 属性
+
+可以实现把鼠标指针放到 div 元素上，其宽度会从 100px 逐渐变为 300px的效果：
+
+	<style> 
+	div
+	{
+		width:100px;
+		height:100px;
+		background:blue;
+		transition:width 5s;
+		-webkit-transition:width 2s; /* Safari and Chrome */
+	}
+	
+	div:hover
+	{
+		width:300px;
+	}
+	</style>
+	</head>
+	<body>
+	
+		<div></div>
+	
+		<p>请把鼠标指针移动到蓝色的 div 元素上，就可以看到过渡效果。</p>
+
+		<p><b>注释：</b>本例在 Internet Explorer 中无效。</p>
+
+	</body>
+
+
+
+transition 属性是一个简写属性，用于设置四个过渡属性：
+
+transition-property<br>
+**transition-duration** 必须设置<br>	
+transition-timing-function<br>
+transition-delay<br>
+
+### HTML <meta> 标签
+
+	必需的属性属性	content	
+
+#### mask-icon
+用于mbp的Touch Bar
+
+	<link rel="mask-icon" href="website_icon.svg" color="red">
+
+其中color部分的值支持16进制的写法 #ffffff
+设计增加对应的svg文件
+
+对应的svg文件的要求是viewBox的值必须是 0 0 16 16
+
+
+### html stylesheet
+
+html的link标签是用于当前文档引用外部文档用的
+	
+	<link rel="stylesheet"  href="style.css" type="text/css" />
+
+ 描述了当前页面与href所指定文档的关系。即说明href连接的文档是一个样式表。
+
+
+### HTML <link> media 属性
+
+media 属性规定被链接文档将显示在什么设备上。该属性通常与 CSS 样式表一起使用，用于为不同的媒介类型规定不同的样式。
+
+media 属性接受若干个值。
