@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+     <style type="text/css">
+        .container{
+          margin:0 auto;
+          width:900px;
+        }
+        #color{
+			height:40px;
+			width:40px;
+		}
+            #text{
+        padding-left:10px;
+        line-height:40px;
+		}
+    </style>
+</head>
+<body>
+    <span>
+        <br><br>
+    </span>
+    <div class="container" style="-moz-border-radius:2em; -webkit-border-radius:2em; border-radius:2em;-moz-box-shadow:2px 2px 7px #C2DFF0; -webkit-box-shadow:2px 2px 7px #C2DFF0; box-shadow:2px 2px 7px #C2DFF0;">
+        <h1 id="charttitle" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; text-align: center;line-height: 15mm;">
+            配方212在5.09-5.18的生长距离</h1>
+        <canvas id="canvas" width="1800" height="1120" style="margin-top: 0;width:900px;height:560px"></canvas>
+    </div>
+    <div>
+
+        <button class="button_graph" onclick="startMovingB()">2017</button>
+        <button class="button_graph" onclick="startMovingA()">2019</button>
+        <div id="color"></div>
+        <div id="text"></div>
+    </div>
+    <script src="./assets/js/stackMap.js"></script>
+
+</body>
+</html>
